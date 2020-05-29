@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040) -->
+<html class="js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths"
+    style="">
+<!--<![endif]-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Singer</title>
+
+    <!--[if IE]>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<![endif]-->
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="stylesheet" href="./Singer_files/bootstrap.min.css">
+    <link rel="stylesheet" href="./Singer_files/animations.css">
+    <link rel="stylesheet" href="./Singer_files/fonts.css">
+    <link rel="stylesheet" href="./Singer_files/cue.css">
+    <link rel="stylesheet" href="./Singer_files/main.css" class="color-switcher-link">
+    <link rel="stylesheet" href="./Singer_files/shop.css" class="color-switcher-link">
+    <link href="Singer_files/icon/css/all.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./Singer_files/mediaelementplayer-legacy.css">
+    <script src="./Singer_files/modernizr-2.6.2.min.js.téléchargement"></script>
+    <!--[if lt IE 9]>
+		<script src="js/vendor/html5shiv.min.js"></script>
+		<script src="js/vendor/respond.min.js"></script>
+		<script src="js/vendor/jquery-1.12.4.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+    <!--[if lt IE 9]>
+		<div class="bg-danger text-center">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" class="highlight">upgrade your browser</a> to improve your experience.</div>
+	<![endif]-->
+
+    <!-- search modal -->
+    <div class="modal" tabindex="-1" role="dialog" aria-labelledby="search_modal" id="search_modal"> <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		<span aria-hidden="true">
+			<i class="rt-icon2-cross2"></i>
+		</span>
+	</button>
+        <div class="widget widget_search">
+            <form method="get" class="searchform search-form form-inline" action="">
+                <div class="form-group bottommargin_0"> <input type="text" value="" name="search" class="form-control" placeholder="Search keyword" id="modal-search-input"> </div> <button type="submit" class="theme_button no_bg_button">Search</button> </form>
+        </div>
+    </div>
+    <!-- Unyson messages modal -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="messages_modal">
+        <div class="fw-messages-wrap ls with_padding">
+            <!-- Uncomment this UL with LI to show messages in modal popup to your user: -->
+            <!--
+		<ul class="list-unstyled">
+			<li>Message To User</li>
+		</ul>
+		-->
+        </div>
+    </div>
+    <!-- eof .modal -->
+    <!-- wrappers for visual page editor and boxed version of template -->
+    <div id="canvas">
+        <div id="box_wrapper">
+
+            <div class="page_header_wrapper header_darkgrey header_transparent_wrap affix-wrapper" style="height: 90px;">
+                <header class="page_header header_darkgrey header_transparent toggler_xs_right tall_header affix">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-12 display_table">
+                                <div class="header_left_logo display_table_cell" style="min-width: 239px;">
+                                    <a href="" class="logo top_logo">
+                                        Shannon Aerias
+                                    </a>
+                                </div>
+                                <div class="header_mainmenu display_table_cell text-center">
+                                    <!-- main nav start -->
+                                    <nav class="mainmenu_wrapper" style="">
+                                        <ul class="mainmenu nav sf-menu sf-js-enabled sf-arrows" style="touch-action: pan-y;">
+                                            <li class="active"> <a href="index.html">Homepage</a>
+                                            </li>
+                                            <li> <a href="about.html">Facebook</a>
+
+                                            </li>
+
+                                            <li> <a href="about.html">Instagram</a>
+
+                                            </li>
+
+                                            <li> <a href="about.html">SoundClound</a>
+
+                                            </li>
+
+                                        </ul>
+                                    </nav>
+                                    <!-- eof main nav -->
+                                    <!-- header toggler --><span class="toggle_menu"><span></span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            </div>
+            <section class="intro_section page_mainslider ds">
+                <div class="flexslider">
+                    <ul class="slides">
+                        <li>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-sm-12 text-center">
+                                        <div class="slide_description_wrapper">
+                                            <div class="slide_description">
+                                                <div class="intro-layer animated fadeInUp" data-animation="fadeInUp" style="visibility: hidden;">
+                                                    <h2> <span class="small">Hello! I am a singer</span> Shannon Areias </h2>
+                                                </div>
+                                                <div class="intro-layer animated fadeInUp" data-animation="fadeInUp" style="visibility: hidden;">
+                                                    <p>Music only makes me stronger. Music speaks to the heart in ways words cannot express.</p>
+                                                </div>
+                                            </div>
+                                            <!-- eof .slide_description -->
+                                        </div>
+                                        <!-- eof .slide_description_wrapper -->
+                                    </div>
+                                    <!-- eof .col-* -->
+                                </div>
+                                <!-- eof .row -->
+                            </div>
+                            <img src="Singer_files/slide01.jpg" />
+                        </li>
+                        <li>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-sm-12 text-center">
+                                        <div class="slide_description_wrapper">
+                                            <div class="slide_description">
+                                                <div class="intro-layer animated fadeInUp" data-animation="fadeInUp" style="visibility: hidden;">
+                                                    <h2> <span class="small">Hello! I am a singer</span> Shannon Arieas </h2>
+                                                </div>
+                                                <div class="intro-layer animated fadeInUp" data-animation="fadeInUp" style="visibility: hidden;">
+                                                    <p>We hold our notes longer, better, and higher. We put the mental in instrumental and the cool in musicool.</p>
+                                                </div>
+                                            </div>
+                                            <!-- eof .slide_description -->
+                                        </div>
+                                        <!-- eof .slide_description_wrapper -->
+                                    </div>
+                                    <!-- eof .col-* -->
+                                </div>
+                                <!-- eof .row -->
+                            </div>
+                            <img src="Singer_files/slide02.jpg" />
+                        </li>
+
+
+                    </ul>
+                </div>
+                <!-- eof flexslider -->
+            </section>
+            <section id="about" class="ds ms page_about parallax section_padding_top_130 section_padding_bottom_75 table_section table_section_md columns_margin_bottom_30" style="background-position: 50% 1px;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 text-center">
+                            <div class="with_frame_image"> <img src="./Singer_files/about.jpg" alt="" class="rounded"> </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h2 class="section_header with_line">Biography</h2>
+                            <p class="fontsize_20">At only 30 years of age, DJ has already established himself as the most successful american artist of the past two decades.</p>
+                            <p>Born on April 22, 1986, in El Centro, California, Shannon rose to stardom as part of a singing act with brother Ban Calen in the 2000s, hitting No. 1 with the single «Make Me Happy». Shannon had established a solo career of
+                                her own as well, having chart-toppers like «Gypsies, Tramps and Thieves», «Half-Breed» and «Dark Lady». Shannon also found more music success with rock-oriented tracks in the '15s and a global dance hit «Believe» and «My
+                                Dreams» in the late '16s. She released Closer to the Truth, her first studio album in 10 years, in 2016, which offered fans more dance hits.</p>
+                            <div class="content-justify vertical-center content-margins topmargin_25">
+                                <div>
+                                    <h3 class="highlight bottommargin_0">Christian Caldwell</h3>
+                                    <p class="small-text grey">Anne`s Producer</p>
+                                </div> <img src="./Singer_files/signature.png" alt=""> </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="events" class="ds parallax ms section_padding_top_130 section_padding_bottom_130">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 text-center">
+                            <h2 class="section_header with_line">Tour Dates</h2>
+                            <div class="owl-carousel topmargin_60">
+                                <div>
+                                    <div class="vertical-item content-absolute hover-entry-content">
+                                        <div class="item-media mutted-media ds"> <img src="./Singer_files/act1.jpg" alt="">
+                                            <div class="entry-meta-corner grey">
+                                                <a href="https://www.facebook.com/ledestindecassandre/"><span class="big"><i class="fab fa-facebook"></i></span> </a></div>
+                                        </div>
+                                        <div class="item-content cs">
+                                            <h3 class="entry-title bottommargin_0"> <a href="team-single.html">Found Festival 2017</a> </h3>
+                                            <p class="small-text bottommargin_0"> 04 Dec 2017 / 05:00 PM / Barcelona </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="vertical-item content-absolute hover-entry-content">
+                                        <div class="item-media mutted-media ds"> <img src="./Singer_files/act2.jpg" alt="">
+                                            <div class="entry-meta-corner grey">
+                                                <a href="https://www.facebook.com/ledestindecassandre/"><span class="big"><i class="fab fa-facebook"></i></span> </a></div>
+                                        </div>
+                                        <div class="item-content cs">
+                                            <h3 class="entry-title bottommargin_0"> <a href="team-single.html">Found Festival 2017</a> </h3>
+                                            <p class="small-text bottommargin_0"> 04 Dec 2017 / 05:00 PM / Barcelona </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="vertical-item content-absolute hover-entry-content">
+                                        <div class="item-media mutted-media ds"> <img src="./Singer_files/act3.jpg" alt="">
+                                            <div class="entry-meta-corner grey">
+                                                <a href="https://www.facebook.com/ledestindecassandre/"><span class="big"><i class="fab fa-facebook"></i></span> </a></div>
+                                        </div>
+                                        <div class="item-content cs">
+                                            <h3 class="entry-title bottommargin_0"> <a href="team-single.html">Found Festival 2017</a> </h3>
+                                            <p class="small-text bottommargin_0"> 04 Dec 2017 / 05:00 PM / Barcelona </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="vertical-item content-absolute hover-entry-content">
+                                        <div class="item-media mutted-media ds"> <img src="./Singer_files/act1.jpg" alt="">
+                                            <div class="entry-meta-corner grey">
+                                                <a href="https://www.facebook.com/ledestindecassandre/"><span class="big"><i class="fab fa-facebook"></i></span> </a></div>
+                                        </div>
+                                        <div class="item-content cs">
+                                            <h3 class="entry-title bottommargin_0"> <a href="team-single.html">Found Festival 2017</a> </h3>
+                                            <p class="small-text bottommargin_0"> 04 Dec 2017 / 05:00 PM / Barcelona </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="vertical-item content-absolute hover-entry-content">
+                                        <div class="item-media mutted-media ds"> <img src="./Singer_files/act2.jpg" alt="">
+                                            <div class="entry-meta-corner grey"> <span class="big">$65</span> <span class="small-text">a ticket</span> </div>
+                                        </div>
+                                        <div class="item-content cs">
+                                            <h3 class="entry-title bottommargin_0"> <a href="team-single.html">Found Festival 2017</a> </h3>
+                                            <p class="small-text bottommargin_0"> 04 Dec 2017 / 05:00 PM / Barcelona </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="featured-video" class="ds parallax section_padding_top_150 section_padding_bottom_150" style="background-position: 50% 1px;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 text-center">
+                            <a href="https://www.youtube.com/watch?v=ML78yrZCcuI" class="theme_button inverse round_button margin_0" data-gal="prettyPhoto[gal-video]">
+                                <i class="fa fa-play" aria-hidden="true"></i>
+                            </a>
+                            <h2 class="section_header bottommargin_0"> Cecilia Lorenz & Shannon Areias - ABBA Medley </h2>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="latest-album" class="ds ms page_latest_album parallax section_padding_top_150 section_padding_bottom_100 columns_margin_bottom_30 columns_padding_25" style="background-position: 50% 1px;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 text-center">
+                            <h2 class="section_header with_line">Latest Album</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5 col-sm-7">
+                            <div class="vertical-item slide-media opened-media">
+                                <div class="item-media-wrap"> <img src="./Singer_files/02(1).jpg" alt="">
+                                    <div class="item-media back-media"> <img src="./Singer_files/cd.png" alt=""> </div>
+                                    <div class="item-media with_frame_image"> <img src="./Singer_files/02(1).jpg" alt="">
+                                        <div class="media-links no-overlay">
+                                            <div class="links-wrap"> <span>
+										<i class="fa fa-play highlight" aria-hidden="true"></i>
+									</span> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-content topmargin_35">
+                                    <h3 class="entry-title"> <a href="single-album.html">Mes chansons/covers</a> </h3>
+                                    <p> <span class="grey">Released:</span> 13/09/2017 <br> <span class="grey">Label:</span> I am the Best, RED <br> <span class="grey">Format:</span> Digital download, CD <br> <span class="grey">Certifications:</span> RIAA:
+                                        Gold </p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-7 col-sm-12">
+                            <article>
+                                <div class="entry-content">
+                                    <div class="cue-playlist-container">
+                                        <div class="cue-playlist cue-theme-default no-touch cue-tracks-count-7 has-artwork"><span class="mejs-offscreen">Audio Player</span>
+                                            <ol class="cue-tracks">
+                                                <li class="cue-track is-playable is-current"><span class="cue-track-details cue-track-cell"><span class="cue-track-title">Upbeat &amp; Inspiring</span><span class="cue-track-artist">AndreySkarlat</span></span><span class="cue-track-length cue-track-cell">5:55</span></li>
+                                                <li class="cue-track is-playable"><span class="cue-track-details cue-track-cell"><span class="cue-track-title">Inspiring Uplifting Corporate</span><span class="cue-track-artist">AndreySkarlat</span></span><span class="cue-track-length cue-track-cell">7:48</span></li>
+                                                <li class="cue-track is-playable"><span class="cue-track-details cue-track-cell"><span class="cue-track-title">Inspiration Kit</span><span class="cue-track-artist">AndreySkarlat</span></span><span class="cue-track-length cue-track-cell">11:36</span></li>
+                                                <li class="cue-track is-playable"><span class="cue-track-details cue-track-cell"><span class="cue-track-title">Happy Upbeat Ukulele</span><span class="cue-track-artist">AndreySkarlat</span></span><span class="cue-track-length cue-track-cell">4:26</span></li>
+                                                <li class="cue-track is-playable"><span class="cue-track-details cue-track-cell"><span class="cue-track-title">Motivational and Inspiring</span><span class="cue-track-artist">AndreySkarlat</span></span><span class="cue-track-length cue-track-cell">3:30</span></li>
+                                                <li class="cue-track is-playable"><span class="cue-track-details cue-track-cell"><span class="cue-track-title">Inspiration Kit</span><span class="cue-track-artist">AndreySkarlat</span></span><span class="cue-track-length cue-track-cell">11:36</span></li>
+                                                <li class="cue-track is-playable"><span class="cue-track-details cue-track-cell"><span class="cue-track-title">Upbeat &amp; Inspiring</span><span class="cue-track-artist">AndreySkarlat</span></span><span class="cue-track-length cue-track-cell">5:55</span></li>
+                                            </ol>
+                                        </div>
+                                        <script type="application/json" class="cue-playlist-data">
+                                            {
+                                                "embed_link": "",
+                                                "permalink": "",
+                                                "skin": "",
+                                                "thumbnail": "./Singer_files/04.jpg",
+                                                "tracks": [{
+                                                    "artist": "AndreySkarlat",
+                                                    "artworkId": 0,
+                                                    "artworkUrl": "#0",
+                                                    "audioId": 1,
+                                                    "audioUrl": "https://s3.envato.com/files/229455919/preview.mp3",
+                                                    "format": "mp3",
+                                                    "length": "5:55",
+                                                    "title": "Upbeat & Inspiring",
+                                                    "order": 0,
+                                                    "mp3": "https://s3.envato.com/files/229455919/preview.mp3",
+                                                    "meta": {
+                                                        "artist": "AndreySkarlat",
+                                                        "length_formatted": "5:55"
+                                                    },
+                                                    "src": "https://s3.envato.com/files/229455919/preview.mp3",
+                                                    "thumb": {
+                                                        "src": "./Singer_files/04.jpg"
+                                                    }
+                                                }, {
+                                                    "artist": "AndreySkarlat",
+                                                    "artworkId": 0,
+                                                    "artworkUrl": "#0",
+                                                    "audioId": 2,
+                                                    "audioUrl": "https://0.s3.envato.com/files/216844247/preview.mp3",
+                                                    "format": "mp3",
+                                                    "length": "7:48",
+                                                    "title": "Inspiring Uplifting Corporate",
+                                                    "order": 0,
+                                                    "mp3": "https://0.s3.envato.com/files/216844247/preview.mp3",
+                                                    "meta": {
+                                                        "artist": "AndreySkarlat",
+                                                        "length_formatted": "7:48"
+                                                    },
+                                                    "src": "https://0.s3.envato.com/files/216844247/preview.mp3",
+                                                    "thumb": {
+                                                        "src": "./Singer_files/04.jpg"
+                                                    }
+                                                }, {
+                                                    "artist": "AndreySkarlat",
+                                                    "artworkId": 0,
+                                                    "artworkUrl": "#0",
+                                                    "audioId": 3,
+                                                    "audioUrl": "https://0.s3.envato.com/files/196824856/preview.mp3",
+                                                    "format": "mp3",
+                                                    "length": "11:36",
+                                                    "title": "Inspiration Kit",
+                                                    "order": 0,
+                                                    "mp3": "https://0.s3.envato.com/files/196824856/preview.mp3",
+                                                    "meta": {
+                                                        "artist": "AndreySkarlat",
+                                                        "length_formatted": "11:36"
+                                                    },
+                                                    "src": "https://0.s3.envato.com/files/196824856/preview.mp3",
+                                                    "thumb": {
+                                                        "src": "images/albums/03.jpg"
+                                                    }
+                                                }, {
+                                                    "artist": "AndreySkarlat",
+                                                    "artworkId": 0,
+                                                    "artworkUrl": "#0",
+                                                    "audioId": 4,
+                                                    "audioUrl": "https://0.s3.envato.com/files/179391137/preview.mp3",
+                                                    "format": "mp3",
+                                                    "length": "4:26",
+                                                    "title": "Happy Upbeat Ukulele",
+                                                    "order": 0,
+                                                    "mp3": "https://0.s3.envato.com/files/179391137/preview.mp3",
+                                                    "meta": {
+                                                        "artist": "AndreySkarlat",
+                                                        "length_formatted": "4:26"
+                                                    },
+                                                    "src": "https://0.s3.envato.com/files/179391137/preview.mp3",
+                                                    "thumb": {
+                                                        "src": "images/albums/04.jpg"
+                                                    }
+                                                }, {
+                                                    "artist": "AndreySkarlat",
+                                                    "artworkId": 0,
+                                                    "artworkUrl": "#0",
+                                                    "audioId": 5,
+                                                    "audioUrl": "https://0.s3.envato.com/files/175505487/preview.mp3",
+                                                    "format": "mp3",
+                                                    "length": "3:30",
+                                                    "title": "Motivational and Inspiring",
+                                                    "order": 0,
+                                                    "mp3": "https://0.s3.envato.com/files/175505487/preview.mp3",
+                                                    "meta": {
+                                                        "artist": "AndreySkarlat",
+                                                        "length_formatted": "3:30"
+                                                    },
+                                                    "src": "https://0.s3.envato.com/files/175505487/preview.mp3",
+                                                    "thumb": {
+                                                        "src": "images/albums/05.jpg"
+                                                    }
+                                                }, {
+                                                    "artist": "AndreySkarlat",
+                                                    "artworkId": 0,
+                                                    "artworkUrl": "#0",
+                                                    "audioId": 3,
+                                                    "audioUrl": "https://0.s3.envato.com/files/196824856/preview.mp3",
+                                                    "format": "mp3",
+                                                    "length": "11:36",
+                                                    "title": "Inspiration Kit",
+                                                    "order": 0,
+                                                    "mp3": "https://0.s3.envato.com/files/196824856/preview.mp3",
+                                                    "meta": {
+                                                        "artist": "AndreySkarlat",
+                                                        "length_formatted": "11:36"
+                                                    },
+                                                    "src": "https://0.s3.envato.com/files/196824856/preview.mp3",
+                                                    "thumb": {
+                                                        "src": "images/albums/03.jpg"
+                                                    }
+                                                }, {
+                                                    "artist": "AndreySkarlat",
+                                                    "artworkId": 0,
+                                                    "artworkUrl": "#0",
+                                                    "audioId": 1,
+                                                    "audioUrl": "https://s3.envato.com/files/229455919/preview.mp3",
+                                                    "format": "mp3",
+                                                    "length": "5:55",
+                                                    "title": "Upbeat & Inspiring",
+                                                    "order": 0,
+                                                    "mp3": "https://s3.envato.com/files/229455919/preview.mp3",
+                                                    "meta": {
+                                                        "artist": "AndreySkarlat",
+                                                        "length_formatted": "5:55"
+                                                    },
+                                                    "src": "https://s3.envato.com/files/229455919/preview.mp3",
+                                                    "thumb": {
+                                                        "src": "./Singer_files/04.jpg"
+                                                    }
+                                                }]
+                                            }
+                                        </script>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="contact" class="ds ms background_cover page_contact section_padding_top_150 section_padding_bottom_150">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-6 text-center">
+                            <h2 class="section_header with_line">Contact for Booking</h2>
+                            <p> For booking and press inquiries please contact my manager by filling the form or calling the number: 1-888-652-2588 </p>
+                            <form class="contact-form columns_padding_10 topmargin_30" method="post" action="">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group margin_0"> <label for="name">Full Name <span class="required">*</span></label> <input type="text" aria-required="true" size="30" value="" name="name" id="name" class="form-control" placeholder="Full Name*"> </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group margin_0"> <label for="email">Email address<span class="required">*</span></label> <input type="email" aria-required="true" size="30" value="" name="email" id="email" class="form-control" placeholder="Your Email Address*">                                            </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group margin_0"> <label for="message">Your question</label> <textarea aria-required="true" rows="5" cols="45" name="message" id="message" class="form-control" placeholder="Your Message*"></textarea> </div>
+                                    </div>
+                                </div>
+                                <div class="row topmargin_20">
+                                    <div class="col-sm-12">
+                                        <div class=" text-center">
+                                            <a class="submitNew" href="mailto:nullepart@mozilla.org?subject=Demande%20inscription%20newsletter&body=Inscrivez-moi%20%C3%A0%20votre%20newsletter%20%21%0D%0A%0D%0ANom%20complet%20%3A%0D%0A%0D%0AO%C3%B9%20avez-vous%20entendu%20parler%20de%20nous%20%3F">
+                                              submit now
+                                            </a>
+                                        </div>
+                                    </div>
+                            </form>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+
+            <section id="gallery" class="ds ms">
+                <div class="owl-carousel gallery-carousel owl-loaded owl-drag owl-theme" data-responsive-xlg="8" data-responsive-lg="6" data-responsive-md="5" data-responsive-sm="4" data-responsive-xs="2" data-loop="true" data-margin="0" data-nav="true">
+
+
+
+
+
+                    <div> <img src="./Singer_files/Carrer/1.jpg" alt="">
+                        <div class="media-links">
+                            <a class="abs-link prettyPhoto" data-gal="prettyPhoto[gal]" title="" href="./Singer_files/Carrer/1.jpg"></a>
+                        </div>
+                    </div>
+                    <div> <img src="./Singer_files/Carrer/2.jpg" alt="">
+                        <div class="media-links">
+                            <a class="abs-link prettyPhoto" data-gal="prettyPhoto[gal]" title="" href="./Singer_files/Carrer/1.jpg"></a>
+                        </div>
+                    </div>
+                    <div> <img src="./Singer_files/Carrer/3.jpg" alt="">
+                        <div class="media-links">
+                            <a class="abs-link prettyPhoto" data-gal="prettyPhoto[gal]" title="" href="./Singer_files/Carrer/1.jpg"></a>
+                        </div>
+                    </div>
+                    <div> <img src="./Singer_files/Carrer/4.jpg" alt="">
+                        <div class="media-links">
+                            <a class="abs-link prettyPhoto" data-gal="prettyPhoto[gal]" title="" href="./Singer_files/Carrer/1.jpg"></a>
+                        </div>
+                    </div>
+                    <div> <img src="./Singer_files/Carrer/5.jpg" alt="">
+                        <div class="media-links">
+                            <a class="abs-link prettyPhoto" data-gal="prettyPhoto[gal]" title="" href="./Singer_files/Carrer/1.jpg"></a>
+                        </div>
+                    </div>
+                    <div> <img src="./Singer_files/Carrer/6.jpg" alt="">
+                        <div class="media-links">
+                            <a class="abs-link prettyPhoto" data-gal="prettyPhoto[gal]" title="" href="./Singer_files/Carrer/1.jpg"></a>
+                        </div>
+                    </div>
+                    <div> <img src="./Singer_files/Carrer/7.jpg" alt="">
+                        <div class="media-links">
+                            <a class="abs-link prettyPhoto" data-gal="prettyPhoto[gal]" title="" href="./Singer_files/Carrer/1.jpg"></a>
+                        </div>
+                    </div>
+                    <div> <img src="./Singer_files/Carrer/8.jpg" alt="">
+                        <div class="media-links">
+                            <a class="abs-link prettyPhoto" data-gal="prettyPhoto[gal]" title="" href="./Singer_files/Carrer/1.jpg"></a>
+                        </div>
+                    </div>
+                    <div> <img src="./Singer_files/Carrer/9.jpg" alt="">
+                        <div class="media-links">
+                            <a class="abs-link prettyPhoto" data-gal="prettyPhoto[gal]" title="" href="./Singer_files/Carrer/1.jpg"></a>
+                        </div>
+                    </div>
+                    <div> <img src="./Singer_files/Carrer/10.jpg" alt="">
+                        <div class="media-links">
+                            <a class="abs-link prettyPhoto" data-gal="prettyPhoto[gal]" title="" href="./Singer_files/Carrer/1.jpg"></a>
+                        </div>
+                    </div>
+                    <div> <img src="./Singer_files/Carrer/11.jpg" alt="">
+                        <div class="media-links">
+                            <a class="abs-link prettyPhoto" data-gal="prettyPhoto[gal]" title="" href="./Singer_files/Carrer/1.jpg"></a>
+                        </div>
+                    </div>
+                    <div> <img src="./Singer_files/Carrer/12.jpg" alt="">
+                        <div class="media-links">
+                            <a class="abs-link prettyPhoto" data-gal="prettyPhoto[gal]" title="" href="./Singer_files/Carrer/1.jpg"></a>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+                </div>
+
+
+                </div>
+            </section>
+            <footer class="page_footer ds section_padding_top_100 section_padding_bottom_100 columns_padding_25">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 text-center">
+                            <div class="widget widget_text">
+                                <h4 class="widget-title with_line"> My Contacts </h4>
+                                <div>
+                                    <div class="media small-media inline-block">
+                                        <div class="media-left"> <i class="fa fa-map-marker highlight" aria-hidden="true"></i> </div>
+                                        <div class="media-body"> 140 Horizon Circle, New York, California </div>
+                                    </div><br>
+                                    <div class="media small-media inline-block">
+                                        <div class="media-left"> <i class="fa fa-phone highlight" aria-hidden="true"></i> </div>
+                                        <div class="media-body"> 1-888-652-2588 </div>
+                                    </div><br>
+                                    <div class="media small-media inline-block">
+
+                                        <div class="media-left"> <i class="fas fa-envelope-open highlight"></i> </div>
+                                        <div class="media-body"> shannon@example.com </div>
+                                    </div><br>
+                                    <div class="media small-media greylinks inline-block">
+                                        <div class="media-left"> <i class="fab fa-internet-explorer highlight"></i></i>
+                                        </div>
+                                        <div class="media-body"> <a href="#">https://www.shannon.com</a> </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 text-center">
+                            <div class="widget widget_recent_entries">
+                                <h4 class="widget-title with_line">Autre Groupe</h4>
+                                <ul class="greylinks">
+                                    <li>
+                                        <p class="bottommargin_0"> <a href="blog-single-left.html">NOAN's</a> </p> <span class="entry-date small-text highlight">
+								<time class="entry-date" datetime="2017-03-13T08:50:40+00:00">
+									Chanteuse
+								</time>
+							</span> </li>
+                                    <li>
+                                        <p class="bottommargin_0"> <a href="blog-single-left.html">Peter Pan</a> </p> <span class="entry-date small-text highlight">
+								<time class="entry-date" datetime="2017-03-13T08:50:40+00:00">
+									Chanteuse et danseuse
+								</time>
+							</span> </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <section class="ds ms page_copyright section_padding_top_40 section_padding_bottom_40">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 text-center">
+                            <p>© Copyright 2020. All Rights Reserved.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- eof #box_wrapper -->
+    </div>
+    <!-- eof #canvas -->
+    <script src="./Singer_files/compressed.js.téléchargement"></script>
+    <script src="./Singer_files/main.js.téléchargement"></script>
+    <script src="./Singer_files/mediaelement-and-player.min.js.téléchargement"></script>
+    <script src="./Singer_files/mediaelement-migrate.min.js.téléchargement"></script>
+    <script>
+        /* <![CDATA[ */
+        var _cueSettings = {
+            "l10n": {
+                "nextTrack": "Next Track",
+                "previousTrack": "Previous Track",
+                "togglePlayer": "Toggle Player",
+                "togglePlaylist": "Toggle Playlist"
+            }
+        };
+        /* ]]> */
+    </script>
+    <script src="./Singer_files/cue.min.js.téléchargement"></script>
+
+
+    </div><a href="#" id="toTop" style="display: none;"><span id="toTopHover"></span>To Top</a></body>
+
+</html>
