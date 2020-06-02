@@ -133,6 +133,10 @@ Border colors for elements in color section: rgba(255, 255, 255, 0.2)
 
 /* columns with 20 and 40 percents width */
 
+.ds a {
+    cursor: pointer;
+}
+
 .col-xs-20,
 .col-sm-20,
 .col-md-20,
