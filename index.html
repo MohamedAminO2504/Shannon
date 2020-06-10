@@ -1,29 +1,29 @@
 <!DOCTYPE html>
-<!-- saved from url=(0040) -->
-<html class="js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths"
-    style="">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
 <!--<![endif]-->
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Singer</title>
-
+    <meta charset="utf-8">
     <!--[if IE]>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<![endif]-->
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <link rel="stylesheet" href="./Singer_files/bootstrap.min.css">
-    <link rel="stylesheet" href="./Singer_files/animations.css">
-    <link rel="stylesheet" href="./Singer_files/fonts.css">
-    <link rel="stylesheet" href="./Singer_files/cue.css">
-    <link rel="stylesheet" href="./Singer_files/main.css" class="color-switcher-link">
-    <link rel="stylesheet" href="./Singer_files/shop.css" class="color-switcher-link">
-    <link href="Singer_files/icon/css/all.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="./Singer_files/mediaelementplayer-legacy.css">
-    <script src="./Singer_files/modernizr-2.6.2.min.js.téléchargement"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/cue.css">
+    <link rel="stylesheet" href="css/main.css" class="color-switcher-link">
+    <link rel="stylesheet" href="css/shop.css" class="color-switcher-link">
+    <link rel="stylesheet" href="css/mediaelementplayer-legacy.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     <!--[if lt IE 9]>
 		<script src="js/vendor/html5shiv.min.js"></script>
 		<script src="js/vendor/respond.min.js"></script>
@@ -35,15 +35,17 @@
     <!--[if lt IE 9]>
 		<div class="bg-danger text-center">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" class="highlight">upgrade your browser</a> to improve your experience.</div>
 	<![endif]-->
-
+    <div class="preloader">
+        <div class="preloader_image fa-spin"></div>
+    </div>
     <!-- search modal -->
     <div class="modal" tabindex="-1" role="dialog" aria-labelledby="search_modal" id="search_modal"> <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 		<span aria-hidden="true">
 			<i class="rt-icon2-cross2"></i>
 		</span>
-	</button>a
+	</button>
         <div class="widget widget_search">
-            <form method="get" class="searchform search-form form-inline" action="">
+            <form method="get" class="searchform search-form form-inline" action="./">
                 <div class="form-group bottommargin_0"> <input type="text" value="" name="search" class="form-control" placeholder="Search keyword" id="modal-search-input"> </div> <button type="submit" class="theme_button no_bg_button">Search</button> </form>
         </div>
     </div>
@@ -62,60 +64,55 @@
     <!-- wrappers for visual page editor and boxed version of template -->
     <div id="canvas">
         <div id="box_wrapper">
+            <!-- template sections -->
 
-            <div class="page_header_wrapper header_darkgrey header_transparent_wrap affix-wrapper" style="height: 90px;">
-                <header class="page_header header_darkgrey header_transparent toggler_xs_right tall_header affix">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-sm-12 display_table">
-                                <div class="header_left_logo display_table_cell" style="min-width: 239px;">
-                                    <a href="" class="logo top_logo">
-                                        Shannon Aerias
-                                    </a>
-                                </div>
-                                <div class="header_mainmenu display_table_cell text-center">
-                                    <!-- main nav start -->
-                                    <nav class="mainmenu_wrapper" style="">
-                                        <ul class="mainmenu nav sf-menu sf-js-enabled sf-arrows" style="touch-action: pan-y;">
-                                            <li class="active"> <a href="index.html">Homepage</a>
-                                            </li>
-                                            <li> <a href="about.html">Facebook</a>
-
-                                            </li>
-
-                                            <li> <a href="about.html">Instagram</a>
-
-                                            </li>
-
-                                            <li> <a href="about.html">SoundClound</a>
-
-                                            </li>
-
-                                        </ul>
-                                    </nav>
-                                    <!-- eof main nav -->
-                                    <!-- header toggler --><span class="toggle_menu"><span></span></span>
-                                </div>
+            <header class="page_header header_darkgrey header_transparent toggler_xs_right tall_header">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-12 display_table">
+                            <div class="header_left_logo display_table_cell">
+                                <a href="./" class="logo top_logo">
+									Shannon Areias
+								</a>
                             </div>
+                            <div class="header_mainmenu display_table_cell text-center">
+                                <!-- main nav start -->
+                                <nav class="mainmenu_wrapper">
+                                    <ul class="mainmenu nav sf-menu">
+                                        <li> <a href="#canvas">Home</a></li>
+                                        <li> <a href="#about">Biographie</a> </li>
+                                        <li> <a href="#galerie">Projets</a> </li>
+                                        <li> <a href="#featured-video">Video</a> </li>
+                                        <li> <a href="#latest-album">Soundcloud</a> </li>
+                                        <li> <a href="#contact">Contact</a> </li>
+                                    </ul>
+                                </nav>
+                                <!-- eof main nav -->
+                                <!-- header toggler --><span class="toggle_menu"><span></span></span>
+                            </div>
+
                         </div>
                     </div>
-                </header>
-            </div>
+                </div>
+            </header>
             <section class="intro_section page_mainslider ds">
                 <div class="flexslider">
                     <ul class="slides">
-                        <li>
+                      
+                    
+
+                        <li > <img src="images/new/2016-06-05 01.10.12.jpg" alt="">
                             <div class="container">
                                 <div class="row">
-                                    <div class="col-sm-12 text-center">
+                                    <div class="col-sm-12">
                                         <div class="slide_description_wrapper">
                                             <div class="slide_description">
-                                                <div class="intro-layer animated fadeInUp" data-animation="fadeInUp" style="visibility: hidden;">
-                                                    <h2> <span class="small">Hello! I am a singer</span> Shannon Areias </h2>
+
+                                                <div class="intro-layer" data-animation="fadeInUp">
+                                                    <p >Bienvenue sur le site officiel de</p>
+                                                    <h2>  Shannon Areias </h2>
                                                 </div>
-                                                <div class="intro-layer animated fadeInUp" data-animation="fadeInUp" style="visibility: hidden;">
-                                                    <p>Music only makes me stronger. Music speaks to the heart in ways words cannot express.</p>
-                                                </div>
+                                                
                                             </div>
                                             <!-- eof .slide_description -->
                                         </div>
@@ -125,45 +122,43 @@
                                 </div>
                                 <!-- eof .row -->
                             </div>
-                            <img src="Singer_files/slide01.jpg" />
-                        </li>
-                        <li>
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-sm-12 text-center">
-                                        <div class="slide_description_wrapper">
-                                            <div class="slide_description">
-                                                <div class="intro-layer animated fadeInUp" data-animation="fadeInUp" style="visibility: hidden;">
-                                                    <h2> <span class="small">Hello! I am a singer</span> Shannon Arieas </h2>
-                                                </div>
-                                                <div class="intro-layer animated fadeInUp" data-animation="fadeInUp" style="visibility: hidden;">
-                                                    <p>We hold our notes longer, better, and higher. We put the mental in instrumental and the cool in musicool.</p>
-                                                </div>
-                                            </div>
-                                            <!-- eof .slide_description -->
-                                        </div>
-                                        <!-- eof .slide_description_wrapper -->
-                                    </div>
-                                    <!-- eof .col-* -->
-                                </div>
-                                <!-- eof .row -->
-                            </div>
-                            <img src="Singer_files/slide02.jpg" />
+                            <!-- eof .container -->
                         </li>
 
+                        <li ><img src="images/slide02.jpg" alt="">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-sm-12 text-center">
+                                        <div class="slide_description_wrapper">
+                                            <div class="slide_description">
+                                                <div class="intro-layer" data-animation="fadeInUp">
+                                                    <p >Bienvenue sur le site officiel de </p>
+                                                    <h2>  Shannon Areias </h2>
+                                              
+                                            </div>
+                                            <!-- eof .slide_description -->
+                                        </div>
+                                        <!-- eof .slide_description_wrapper -->
+                                    </div>
+                                    <!-- eof .col-* -->
+                                </div>
+                                <!-- eof .row -->
+                            </div>
+                            <!-- eof .container -->
+                        </li>
 
                     </ul>
                 </div>
                 <!-- eof flexslider -->
             </section>
-            <section id="about" class="ds ms page_about parallax section_padding_top_130 section_padding_bottom_75 table_section table_section_md columns_margin_bottom_30" style="background-position: 50% 1px;">
-                <div class="container">
+            <section id="about" class="ds ms page_about parallax section_padding_top_130 section_padding_bottom_75 table_section table_section_md columns_margin_bottom_30">
+               * <div class="container">
                     <div class="row">
                         <div class="col-md-6 text-center">
-                            <div class="with_frame_image"> <img src="./Singer_files/about.jpg" alt="" class="rounded"> </div>
+                            <div class="with_frame_image"> <img src="images/new/2016-06-05 02.56.57.jpg" alt="" class="rounded"> </div>
                         </div>
                         <div class="col-md-6">
-                            <h2 class="section_header with_line">Biography</h2>
+                            <h2 class="section_header corail">Biographie</h2>
 
                             <p>Passionnée par le chant et la danse depuis petite, Shannon a toujours su qu’elle ne s’épanouirait que dans le domaine artistique.
 
@@ -191,7 +186,7 @@
                             <p> C’est ainsi qu’elle intègre l’orchestre Kubiak cette même année, pour une période de 3 mois, en tant que danseuse professionnelle.
 
                             </p>
-                            <p> En 2019, Shannon est choisie en tant que premier rôle pour incarner Lola dans le spectacle de Noël « Mes amis les jouets « , produit par Boomerang Evenementiel. Ce rôle lui permettra lui permettra de mettre en avant ses compétences
+                            <p> En 2019, Shannon est choisie en tant que premier rôle pour incarner Lola dans le spectacle de Noël « Mes amis les jouets « , produit par Boomerang Evenementiel. Ce rôle lui permettra de mettre en avant ses compétences
                                 en tant que comédienne.
 
                             </p>
@@ -199,451 +194,604 @@
                             </p>
                             <div class="content-justify vertical-center content-margins topmargin_25">
                                 <div>
-                                    <h3 class="highlight bottommargin_0">Christian Caldwell</h3>
-                                    <p class="small-text grey">Anne`s Producer</p>
-                                </div> <img src="./Singer_files/signature.png" alt=""> </div>
+                                    <h3 class="highlight bottommargin_0">Shannon Areias</h3>
                         </div>
                     </div>
                 </div>
             </section>
-            <section id="events" class="ds parallax ms section_padding_top_130 section_padding_bottom_130">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-12 text-center">
-                            <h2 class="section_header with_line">Tour Dates</h2>
-                            <div class="owl-carousel topmargin_60">
-                                <div>
-                                    <div class="vertical-item content-absolute hover-entry-content">
-                                        <div class="item-media mutted-media ds"> <img src="./Singer_files/act1.jpg" alt="">
-                                            <div class="entry-meta-corner grey">
-                                                <a href="https://www.facebook.com/ledestindecassandre/"><span class="big"><i class="fab fa-facebook"></i></span> </a></div>
-                                        </div>
-                                        <div class="item-content cs">
-                                            <h3 class="entry-title bottommargin_0"> <a href="team-single.html">Found Festival 2017</a> </h3>
-                                            <p class="small-text bottommargin_0"> 04 Dec 2017 / 05:00 PM / Barcelona </p>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="vertical-item content-absolute hover-entry-content">
-                                        <div class="item-media mutted-media ds"> <img src="./Singer_files/act2.jpg" alt="">
-                                            <div class="entry-meta-corner grey">
-                                                <a href="https://www.facebook.com/ledestindecassandre/"><span class="big"><i class="fab fa-facebook"></i></span> </a></div>
-                                        </div>
-                                        <div class="item-content cs">
-                                            <h3 class="entry-title bottommargin_0"> <a href="team-single.html">Found Festival 2017</a> </h3>
-                                            <p class="small-text bottommargin_0"> 04 Dec 2017 / 05:00 PM / Barcelona </p>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="vertical-item content-absolute hover-entry-content">
-                                        <div class="item-media mutted-media ds"> <img src="./Singer_files/act3.jpg" alt="">
-                                            <div class="entry-meta-corner grey">
-                                                <a href="https://www.facebook.com/ledestindecassandre/"><span class="big"><i class="fab fa-facebook"></i></span> </a></div>
-                                        </div>
-                                        <div class="item-content cs">
-                                            <h3 class="entry-title bottommargin_0"> <a href="team-single.html">Found Festival 2017</a> </h3>
-                                            <p class="small-text bottommargin_0"> 04 Dec 2017 / 05:00 PM / Barcelona </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="vertical-item content-absolute hover-entry-content">
-                                        <div class="item-media mutted-media ds"> <img src="./Singer_files/act1.jpg" alt="">
-                                            <div class="entry-meta-corner grey">
-                                                <a href="https://www.facebook.com/ledestindecassandre/"><span class="big"><i class="fab fa-facebook"></i></span> </a></div>
-                                        </div>
-                                        <div class="item-content cs">
-                                            <h3 class="entry-title bottommargin_0"> <a href="team-single.html">Found Festival 2017</a> </h3>
-                                            <p class="small-text bottommargin_0"> 04 Dec 2017 / 05:00 PM / Barcelona </p>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="vertical-item content-absolute hover-entry-content">
-                                        <div class="item-media mutted-media ds"> <img src="./Singer_files/act2.jpg" alt="">
-                                            <div class="entry-meta-corner grey"> <span class="big">$65</span> <span class="small-text">a ticket</span> </div>
-                                        </div>
-                                        <div class="item-content cs">
-                                            <h3 class="entry-title bottommargin_0"> <a href="team-single.html">Found Festival 2017</a> </h3>
-                                            <p class="small-text bottommargin_0"> 04 Dec 2017 / 05:00 PM / Barcelona </p>
-
-                                        </div>
-                                    </div>
-                                </div>
+            <section id="galerie" class="ds ms parallax page_portfolio section_padding_top_130 section_padding_bottom_130">
+				<div class="container">
+					<div class="row">
+                        <div class="row">
+                            <div class="col-sm-12 text-center">
+                                <h2 class="section_header corail">Mes Projets</h2>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </section>
-            <section id="featured-video" class="ds parallax section_padding_top_150 section_padding_bottom_150" style="background-position: 50% 1px;">
+
+						<div class="col-sm-12">
+							<div class="filters isotope_filters darklinks hover-color2"> <a href="#" class="selected" data-filter="*">Tout</a> <a href="#" data-filter=".cat1">Chant</a> <a href="#" data-filter=".cat2">Danse</a> <a href="#" data-filter=".cat3">Spectacle</a> <a href="#" data-filter=".cat4">Autre</a> </div>
+							<div class="isotope_container isotope row masonry-layout columns_margin_bottom_20" data-filters=".isotope_filters">
+                                
+                                
+                                <div class="isotope-item col-lg-4 col-md-6 col-sm-12 cat1">
+									<div class="vertical-item gallery-item content-absolute text-center ds">
+										<div class="item-media"> <img src="images/categorie/Chant/Shannon Areias (1).jpg" alt="">
+											<div class="media-links">
+
+												<div class="links-wrap"> <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal-video]" href="http://www.youtube.com/watch?v=lewM7tmbfEw" ></a> </div>
+											</div>
+										</div>
+									</div>
+                                </div>
+
+
+                                                          
+                               
+                                                                    
+                          
+                                <div class="isotope-item col-lg-4 col-md-6 col-sm-12 cat1">
+									<div class="vertical-item gallery-item content-absolute text-center ds">
+										<div class="item-media"> <img src="images/categorie/Chant/Shannon Areias (4).jpg" alt="">
+											<div class="media-links">
+
+												<div class="links-wrap"> <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal-video]" href="https://www.youtube.com/watch?v=2Kvl0vpV6lM" ></a> </div>
+											</div>
+										</div>
+									</div>
+                                </div>
+                           
+
+                                <div class="isotope-item col-lg-4 col-md-6 col-sm-12 cat2">
+									<div class="vertical-item gallery-item content-absolute text-center ds">
+										<div class="item-media"> <img src="images/categorie/Danse/Shannon Areias (1).jpg" alt="">
+											<div class="media-links">
+
+												<div class="links-wrap"> <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal-video]" href="https://www.youtube.com/watch?v=2Kvl0vpV6lM" ></a> </div>
+											</div>
+										</div>
+									</div>
+                                </div>
+                                <div class="isotope-item col-lg-4 col-md-6 col-sm-12 cat1">
+									<div class="vertical-item gallery-item content-absolute text-center ds">
+										<div class="item-media"> <img src="images/categorie/Chant/103859711_695854157903437_7564761771405247774_n.jpg" alt="">
+											<div class="media-links">
+
+												<div class="links-wrap"> <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal-video]" href="https://www.youtube.com/watch?v=2Kvl0vpV6lM" ></a> </div>
+											</div>
+										</div>
+									</div>
+                                </div>
+
+                                                                    
+                                <div class="isotope-item col-lg-4 col-md-6 col-sm-12 cat1">
+									<div class="vertical-item gallery-item content-absolute text-center ds">
+										<div class="item-media"> <img src="images/categorie/Chant/37307331_292169458010857_616564412429369344_o.jpg" alt="">
+											<div class="media-links">
+
+												<div class="links-wrap"> <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal-video]" href="https://www.youtube.com/watch?v=2Kvl0vpV6lM" ></a> </div>
+											</div>
+										</div>
+									</div>
+                                </div>
+
+                                                                    
+                                <div class="isotope-item col-lg-4 col-md-6 col-sm-12 cat1">
+									<div class="vertical-item gallery-item content-absolute text-center ds">
+										<div class="item-media"> <img src="images/categorie/Chant/48426513_381299299097872_8572838500448075776_o.jpg" alt="">
+											<div class="media-links">
+
+												<div class="links-wrap"> <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal-video]" href="https://www.youtube.com/watch?v=2Kvl0vpV6lM" ></a> </div>
+											</div>
+										</div>
+									</div>
+                                </div>
+
+                                                                    
+                                <div class="isotope-item col-lg-4 col-md-6 col-sm-12 cat1">
+									<div class="vertical-item gallery-item content-absolute text-center ds">
+										<div class="item-media"> <img src="images/categorie/Chant/57227029_429793844248417_5102873089876688896_n.jpg" alt="">
+											<div class="media-links">
+
+												<div class="links-wrap"> <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal-video]" href="https://www.youtube.com/watch?v=2Kvl0vpV6lM" ></a> </div>
+											</div>
+										</div>
+									</div>
+                                </div>
+
+                                <div class="isotope-item col-lg-4 col-md-6 col-sm-12 cat2">
+									<div class="vertical-item gallery-item content-absolute text-center ds">
+										<div class="item-media"> <img src="images/categorie/Danse/Shannon Areias (2).jpg" alt="">
+											<div class="media-links">
+
+												<div class="links-wrap"> <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal-video]" href="https://www.youtube.com/watch?v=2Kvl0vpV6lM" ></a> </div>
+											</div>
+										</div>
+									</div>
+                                </div>
+
+                         
+
+                                <div class="isotope-item col-lg-4 col-md-6 col-sm-12 cat2">
+									<div class="vertical-item gallery-item content-absolute text-center ds">
+										<div class="item-media"> <img src="images/categorie/Danse/Shannon Areias (4).jpg" alt="">
+											<div class="media-links">
+
+												<div class="links-wrap"> <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal-video]" href="https://www.youtube.com/watch?v=2Kvl0vpV6lM" ></a> </div>
+											</div>
+										</div>
+									</div>
+                                </div>
+                                <div class="isotope-item col-lg-4 col-md-6 col-sm-12 cat2">
+									<div class="vertical-item gallery-item content-absolute text-center ds">
+										<div class="item-media"> <img src="images/categorie/Danse/103984565_625228148201546_934476267650851470_n.jpg" alt="">
+											<div class="media-links">
+
+												<div class="links-wrap"> <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal-video]" href="https://www.youtube.com/watch?v=2Kvl0vpV6lM" ></a> </div>
+											</div>
+										</div>
+									</div>
+                                </div>
+                                <div class="isotope-item col-lg-4 col-md-6 col-sm-12 cat2">
+									<div class="vertical-item gallery-item content-absolute text-center ds">
+										<div class="item-media"> <img src="images/categorie/Danse/Shannon Areias (5).jpg" alt="">
+											<div class="media-links">
+
+												<div class="links-wrap"> <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal-video]" href="https://www.youtube.com/watch?v=2Kvl0vpV6lM" ></a> </div>
+											</div>
+										</div>
+									</div>
+                                </div>
+                                <div class="isotope-item col-lg-4 col-md-6 col-sm-12 cat2">
+									<div class="vertical-item gallery-item content-absolute text-center ds">
+										<div class="item-media"> <img src="images/categorie/Danse/Shannon Areias (6).jpg" alt="">
+											<div class="media-links">
+
+												<div class="links-wrap"> <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal-video]" href="https://www.youtube.com/watch?v=2Kvl0vpV6lM" ></a> </div>
+											</div>
+										</div>
+									</div>
+                                </div>
+
+
+                                <div class="isotope-item col-lg-4 col-md-6 col-sm-12 cat3">
+									<div class="vertical-item gallery-item content-absolute text-center ds">
+										<div class="item-media"> <img src="images/categorie/Spectacle/Shannon Areias (1).jpg" alt="">
+											<div class="media-links">
+
+												<div class="links-wrap"> <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal-video]" href="https://www.youtube.com/watch?v=2Kvl0vpV6lM" ></a> </div>
+											</div>
+										</div>
+									</div>
+                                </div>
+
+
+                                <div class="isotope-item col-lg-4 col-md-6 col-sm-12 cat3">
+									<div class="vertical-item gallery-item content-absolute text-center ds">
+										<div class="item-media"> <img src="images/categorie/Spectacle/Shannon Areias (10).jpg" alt="">
+											<div class="media-links">
+
+												<div class="links-wrap"> <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal-video]" href="https://www.youtube.com/watch?v=2Kvl0vpV6lM" ></a> </div>
+											</div>
+										</div>
+									</div>
+                                </div>
+
+
+                                <div class="isotope-item col-lg-4 col-md-6 col-sm-12 cat3">
+									<div class="vertical-item gallery-item content-absolute text-center ds">
+										<div class="item-media"> <img src="images/categorie/Spectacle/Shannon Areias (11).jpg" alt="">
+											<div class="media-links">
+
+												<div class="links-wrap"> <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal-video]" href="https://www.youtube.com/watch?v=2Kvl0vpV6lM" ></a> </div>
+											</div>
+										</div>
+									</div>
+                                </div>
+
+
+                                <div class="isotope-item col-lg-4 col-md-6 col-sm-12 cat3">
+									<div class="vertical-item gallery-item content-absolute text-center ds">
+										<div class="item-media"> <img src="images/categorie/Spectacle/Shannon Areias (12).jpg" alt="">
+											<div class="media-links">
+
+												<div class="links-wrap"> <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal-video]" href="https://www.youtube.com/watch?v=2Kvl0vpV6lM" ></a> </div>
+											</div>
+										</div>
+									</div>
+                                </div>
+                                <div class="isotope-item col-lg-4 col-md-6 col-sm-12 cat3">
+									<div class="vertical-item gallery-item content-absolute text-center ds">
+										<div class="item-media"> <img src="images/categorie/Spectacle/Shannon Areias (2).jpg" alt="">
+											<div class="media-links">
+
+												<div class="links-wrap"> <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal-video]" href="https://www.youtube.com/watch?v=2Kvl0vpV6lM" ></a> </div>
+											</div>
+										</div>
+									</div>
+                                </div>
+
+                                <div class="isotope-item col-lg-4 col-md-6 col-sm-12 cat1">
+									<div class="vertical-item gallery-item content-absolute text-center ds">
+										<div class="item-media"> <img src="images/categorie/Chant/Shannon Areias (3).jpg" alt="">
+											<div class="media-links">
+
+												<div class="links-wrap"> <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal-video]" href="https://www.youtube.com/watch?v=2Kvl0vpV6lM" ></a> </div>
+											</div>
+										</div>
+									</div>
+                                </div>
+                                <div class="isotope-item col-lg-4 col-md-6 col-sm-12 cat3">
+									<div class="vertical-item gallery-item content-absolute text-center ds">
+										<div class="item-media"> <img src="images/categorie/Spectacle/Shannon Areias (3).jpg" alt="">
+											<div class="media-links">
+
+												<div class="links-wrap"> <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal-video]" href="https://www.youtube.com/watch?v=2Kvl0vpV6lM" ></a> </div>
+											</div>
+										</div>
+									</div>
+                                </div>
+                                <div class="isotope-item col-lg-4 col-md-6 col-sm-12 cat1">
+									<div class="vertical-item gallery-item content-absolute text-center ds">
+										<div class="item-media"> <img src="images/categorie/Chant/Noans (2).jpg" alt="">
+											<div class="media-links">
+
+												<div class="links-wrap"> <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal-video]" href="https://www.youtube.com/watch?v=2Kvl0vpV6lM" ></a> </div>
+											</div>
+										</div>
+									</div>
+                                </div>
+                                <div class="isotope-item col-lg-4 col-md-6 col-sm-12 cat3">
+									<div class="vertical-item gallery-item content-absolute text-center ds">
+										<div class="item-media"> <img src="images/categorie/Spectacle/Shannon Areias (4).jpg" alt="">
+											<div class="media-links">
+
+												<div class="links-wrap"> <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal-video]" href="https://www.youtube.com/watch?v=2Kvl0vpV6lM" ></a> </div>
+											</div>
+										</div>
+									</div>
+                                </div>
+                                <div class="isotope-item col-lg-4 col-md-6 col-sm-12 cat1">
+									<div class="vertical-item gallery-item content-absolute text-center ds">
+										<div class="item-media"> <img src="images/categorie/Chant/Shannon Areias (5).jpg" alt="">
+											<div class="media-links">
+
+												<div class="links-wrap"> <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal-video]" href="https://www.youtube.com/watch?v=2Kvl0vpV6lM" ></a> </div>
+											</div>
+										</div>
+									</div>
+                                </div>
+
+                                <div class="isotope-item col-lg-4 col-md-6 col-sm-12 cat1">
+									<div class="vertical-item gallery-item content-absolute text-center ds">
+										<div class="item-media"> <img src="images/categorie/Chant/Noans (1).jpg" alt="">
+											<div class="media-links">
+
+												<div class="links-wrap"> <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal-video]" href="https://www.youtube.com/watch?v=2Kvl0vpV6lM" ></a> </div>
+											</div>
+										</div>
+									</div>
+                                </div>
+
+                                <div class="isotope-item col-lg-4 col-md-6 col-sm-12 cat1">
+									<div class="vertical-item gallery-item content-absolute text-center ds">
+										<div class="item-media"> <img src="images/categorie/Chant/Shannon et Brian (2).jpg" alt="">
+											<div class="media-links">
+
+												<div class="links-wrap"> <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal-video]" href="https://www.youtube.com/watch?v=2Kvl0vpV6lM" ></a> </div>
+											</div>
+										</div>
+									</div>
+                                </div>
+                                <div class="isotope-item col-lg-4 col-md-6 col-sm-12 cat2">
+									<div class="vertical-item gallery-item content-absolute text-center ds">
+										<div class="item-media"> <img src="images/categorie/Danse/Shannon Areias (3).jpg" alt="">
+											<div class="media-links">
+
+												<div class="links-wrap"> <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal-video]" href="https://www.youtube.com/watch?v=2Kvl0vpV6lM" ></a> </div>
+											</div>
+										</div>
+									</div>
+                                </div>
+                                <div class="isotope-item col-lg-4 col-md-6 col-sm-12 cat3">
+									<div class="vertical-item gallery-item content-absolute text-center ds">
+										<div class="item-media"> <img src="images/categorie/Spectacle/Shannon Areias (5).jpg" alt="">
+											<div class="media-links">
+
+												<div class="links-wrap"> <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal-video]" href="https://www.youtube.com/watch?v=2Kvl0vpV6lM" ></a> </div>
+											</div>
+										</div>
+									</div>
+                                </div>
+                                <div class="isotope-item col-lg-4 col-md-6 col-sm-12 cat3">
+									<div class="vertical-item gallery-item content-absolute text-center ds">
+										<div class="item-media"> <img src="images/categorie/Spectacle/Shannon Areias (6).jpg" alt="">
+											<div class="media-links">
+
+												<div class="links-wrap"> <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal-video]" href="https://www.youtube.com/watch?v=2Kvl0vpV6lM" ></a> </div>
+											</div>
+										</div>
+									</div>
+                                </div>
+
+
+                                <div class="isotope-item col-lg-4 col-md-6 col-sm-12 cat1">
+									<div class="vertical-item gallery-item content-absolute text-center ds">
+										<div class="item-media"> <img src="images/categorie/Chant/Shannon et Brian (1).jpg" alt="">
+											<div class="media-links">
+
+												<div class="links-wrap"> <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal-video]" href="https://www.youtube.com/watch?v=2Kvl0vpV6lM" ></a> </div>
+											</div>
+										</div>
+									</div>
+                                </div>
+
+                                <div class="isotope-item col-lg-4 col-md-6 col-sm-12 cat3">
+									<div class="vertical-item gallery-item content-absolute text-center ds">
+										<div class="item-media"> <img src="images/categorie/Spectacle/Shannon Areias (7).jpg" alt="">
+											<div class="media-links">
+
+												<div class="links-wrap"> <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal-video]" href="https://www.youtube.com/watch?v=2Kvl0vpV6lM" ></a> </div>
+											</div>
+										</div>
+									</div>
+                                </div>
+                                <div class="isotope-item col-lg-4 col-md-6 col-sm-12 cat4">
+									<div class="vertical-item gallery-item content-absolute text-center ds">
+										<div class="item-media"> <img src="images/categorie/Autre/21367088_171789946715476_1213248172599511571_o.jpg" alt="">
+											<div class="media-links">
+
+												<div class="links-wrap"> <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal-video]" href="https://www.youtube.com/watch?v=2Kvl0vpV6lM" ></a> </div>
+											</div>
+										</div>
+									</div>
+                                </div>
+
+                                <div class="isotope-item col-lg-4 col-md-6 col-sm-12 cat1">
+									<div class="vertical-item gallery-item content-absolute text-center ds">
+										<div class="item-media"> <img src="images/categorie/Spectacle/Shannon et Clement.jpg" alt="">
+											<div class="media-links">
+
+												<div class="links-wrap"> <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal-video]" href="https://www.youtube.com/watch?v=2Kvl0vpV6lM" ></a> </div>
+											</div>
+										</div>
+									</div>
+                                </div>
+
+
+                                <div class="isotope-item col-lg-4 col-md-6 col-sm-12 cat3">
+									<div class="vertical-item gallery-item content-absolute text-center ds">
+										<div class="item-media"> <img src="images/categorie/Spectacle/Shannon Areias (8).jpg" alt="">
+											<div class="media-links">
+
+												<div class="links-wrap"> <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal-video]" href="https://www.youtube.com/watch?v=2Kvl0vpV6lM" ></a> </div>
+											</div>
+										</div>
+									</div>
+                                </div>
+                                <div class="isotope-item col-lg-4 col-md-6 col-sm-12 cat3">
+									<div class="vertical-item gallery-item content-absolute text-center ds">
+										<div class="item-media"> <img src="images/categorie/Spectacle/Shannon Areias (9).jpg" alt="">
+											<div class="media-links">
+
+												<div class="links-wrap"> <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal-video]" href="https://www.youtube.com/watch?v=2Kvl0vpV6lM" ></a> </div>
+											</div>
+										</div>
+									</div>
+                                </div>
+
+
+                                <div class="isotope-item col-lg-4 col-md-6 col-sm-12 cat4">
+									<div class="vertical-item gallery-item content-absolute text-center ds">
+										<div class="item-media"> <img src="images/categorie/Autre/Shannon Areias (1).jpg" alt="">
+											<div class="media-links">
+
+												<div class="links-wrap"> <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal-video]" href="https://www.youtube.com/watch?v=2Kvl0vpV6lM" ></a> </div>
+											</div>
+										</div>
+									</div>
+                                </div>
+
+
+                                <div class="isotope-item col-lg-4 col-md-6 col-sm-12 cat1">
+									<div class="vertical-item gallery-item content-absolute text-center ds">
+										<div class="item-media"> <img src="images/categorie/Chant/75371691_2421381611318000_6572380280298930176_o.jpg" alt="">
+											<div class="media-links">
+
+												<div class="links-wrap"> <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal-video]" href="https://www.youtube.com/watch?v=2Kvl0vpV6lM" ></a> </div>
+											</div>
+										</div>
+									</div>
+                                </div>
+
+                                                                    
+                                <div class="isotope-item col-lg-4 col-md-6 col-sm-12 cat1">
+									<div class="vertical-item gallery-item content-absolute text-center ds">
+										<div class="item-media"> <img src="images/categorie/Chant/78416841_566325690595231_3053823546770849792_n.jpg" alt="">
+											<div class="media-links">
+
+												<div class="links-wrap"> <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal-video]" href="https://www.youtube.com/watch?v=2Kvl0vpV6lM" ></a> </div>
+											</div>
+										</div>
+									</div>
+                                </div>
+
+                                                                    
+                                <div class="isotope-item col-lg-4 col-md-6 col-sm-12 cat1">
+									<div class="vertical-item gallery-item content-absolute text-center ds">
+										<div class="item-media"> <img src="images/categorie/Chant/83141853_617354228825710_8586551064008851456_n.jpg" alt="">
+											<div class="media-links">
+
+												<div class="links-wrap"> <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal-video]" href="https://www.youtube.com/watch?v=2Kvl0vpV6lM" ></a> </div>
+											</div>
+										</div>
+									</div>
+                                </div>
+
+                                <div class="isotope-item col-lg-4 col-md-6 col-sm-12 cat1">
+									<div class="vertical-item gallery-item content-absolute text-center ds">
+										<div class="item-media"> <img src="images/categorie/Chant/Shannon Areias (2).jpg" alt="">
+											<div class="media-links">
+
+												<div class="links-wrap"> <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal-video]" href="https://www.youtube.com/watch?v=2Kvl0vpV6lM" ></a> </div>
+											</div>
+										</div>
+									</div>
+                                </div>
+                                <div class="isotope-item col-lg-4 col-md-6 col-sm-12 cat1">
+									<div class="vertical-item gallery-item content-absolute text-center ds">
+										<div class="item-media"> <img src="images/categorie/Chant/103859711_695854157903437_7564761771405247774_n.jpg" alt="">
+											<div class="media-links">
+
+												<div class="links-wrap"> <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal-video]" href="https://www.youtube.com/watch?v=2Kvl0vpV6lM" ></a> </div>
+											</div>
+										</div>
+									</div>
+                                </div>
+
+                                <div class="isotope-item col-lg-4 col-md-6 col-sm-12 cat3">
+									<div class="vertical-item gallery-item content-absolute text-center ds">
+										<div class="item-media"> <img src="images/categorie/Chant/Noans (1).jpg" alt="">
+											<div class="media-links">
+
+												<div class="links-wrap"> <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal-video]" href="https://www.youtube.com/watch?v=2Kvl0vpV6lM" ></a> </div>
+											</div>
+										</div>
+									</div>
+                                </div>
+                                <div class="isotope-item col-lg-4 col-md-6 col-sm-12 cat4">
+									<div class="vertical-item gallery-item content-absolute text-center ds">
+										<div class="item-media"> <img src="images/categorie/Autre/Shannon Areias (2).jpg" alt="">
+											<div class="media-links">
+
+												<div class="links-wrap"> <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal-video]" href="https://www.youtube.com/watch?v=2Kvl0vpV6lM" ></a> </div>
+											</div>
+										</div>
+									</div>
+                                </div>
+                                <div class="isotope-item col-lg-4 col-md-6 col-sm-12 cat4">
+									<div class="vertical-item gallery-item content-absolute text-center ds">
+										<div class="item-media"> <img src="images/categorie/Autre/Shannon Areias (3).jpg" alt="">
+											<div class="media-links">
+
+												<div class="links-wrap"> <a class="p-view prettyPhoto " title="" data-gal="prettyPhoto[gal-video]" href="https://www.youtube.com/watch?v=2Kvl0vpV6lM" ></a> </div>
+											</div>
+										</div>
+									</div>
+                                </div>
+							</div>			
+						</div>
+					</div>
+				</div>
+			</section>
+      
+            <section id="featured-video" class="ds parallax section_padding_top_150 section_padding_bottom_150">
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-12 text-center">
-                            <a href="https://www.youtube.com/watch?v=ML78yrZCcuI" class="theme_button inverse round_button margin_0" data-gal="prettyPhoto[gal-video]">
+                            <a href="https://www.youtube.com/watch?v=lewM7tmbfEw" class="theme_button inverse round_button margin_0">
                                 <i class="fa fa-play" aria-hidden="true"></i>
                             </a>
-                            <h2 class="section_header bottommargin_0"> Cecilia Lorenz & Shannon Areias - ABBA Medley </h2>
+                            <h2 class="section_header bottommargin_0"> Fields of Gold - ( Live ) Cover Session - Shannon Areias   </h2>
                         </div>
                     </div>
                 </div>
             </section>
-            <section id="latest-album" class="ds ms page_latest_album parallax section_padding_top_150 section_padding_bottom_100 columns_margin_bottom_30 columns_padding_25" style="background-position: 50% 1px;">
+            <section id="latest-album" class="ds ms page_latest_album parallax section_padding_top_150 section_padding_bottom_100 columns_margin_bottom_30 columns_padding_25">
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-12 text-center">
-                            <h2 class="section_header with_line">Latest Album</h2>
+                            <h2 class="section_header corail">SOUNDCLOUD</h2>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-5 col-sm-7">
                             <div class="vertical-item slide-media opened-media">
-                                <div class="item-media-wrap"> <img src="./Singer_files/02(1).jpg" alt="">
-                                    <div class="item-media back-media"> <img src="./Singer_files/cd.png" alt=""> </div>
-                                    <div class="item-media with_frame_image"> <img src="./Singer_files/02(1).jpg" alt="">
+                                <div class="item-media-wrap"> <img src="images/02(1).jpg" alt="">
+                                    <div class="item-media back-media"> <img src="images/albums/cd.png" alt=""> </div>
+                                    <div class="item-media with_frame_image"> <img src="images/02(1).jpg" alt="">
                                         <div class="media-links no-overlay">
-                                            <div class="links-wrap"> <span>
-										<i class="fa fa-play highlight" aria-hidden="true"></i>
-									</span> </div>
+                                          
                                         </div>
                                     </div>
-                                </div>
-                                <div class="item-content topmargin_35">
-                                    <h3 class="entry-title"> <a href="single-album.html">Mes chansons/covers</a> </h3>
-                                    <p> <span class="grey">Released:</span> 13/09/2017 <br> <span class="grey">Label:</span> I am the Best, RED <br> <span class="grey">Format:</span> Digital download, CD <br> <span class="grey">Certifications:</span> RIAA:
-                                        Gold </p>
+                                </div><br>
+                                <a href="https://soundcloud.com/shannonareias">  <h3>@ShannonA</h3></a>
 
-                                </div>
                             </div>
+                            
                         </div>
                         <div class="col-md-7 col-sm-12">
-                            <article>
-                                <div class="entry-content">
-                                    <div class="cue-playlist-container">
-                                        <div class="cue-playlist cue-theme-default no-touch cue-tracks-count-7 has-artwork"><span class="mejs-offscreen">Audio Player</span>
-                                            <ol class="cue-tracks">
-                                                <li class="cue-track is-playable is-current"><span class="cue-track-details cue-track-cell"><span class="cue-track-title">Upbeat &amp; Inspiring</span><span class="cue-track-artist">AndreySkarlat</span></span><span class="cue-track-length cue-track-cell">5:55</span></li>
-                                                <li class="cue-track is-playable"><span class="cue-track-details cue-track-cell"><span class="cue-track-title">Inspiring Uplifting Corporate</span><span class="cue-track-artist">AndreySkarlat</span></span><span class="cue-track-length cue-track-cell">7:48</span></li>
-                                                <li class="cue-track is-playable"><span class="cue-track-details cue-track-cell"><span class="cue-track-title">Inspiration Kit</span><span class="cue-track-artist">AndreySkarlat</span></span><span class="cue-track-length cue-track-cell">11:36</span></li>
-                                                <li class="cue-track is-playable"><span class="cue-track-details cue-track-cell"><span class="cue-track-title">Happy Upbeat Ukulele</span><span class="cue-track-artist">AndreySkarlat</span></span><span class="cue-track-length cue-track-cell">4:26</span></li>
-                                                <li class="cue-track is-playable"><span class="cue-track-details cue-track-cell"><span class="cue-track-title">Motivational and Inspiring</span><span class="cue-track-artist">AndreySkarlat</span></span><span class="cue-track-length cue-track-cell">3:30</span></li>
-                                                <li class="cue-track is-playable"><span class="cue-track-details cue-track-cell"><span class="cue-track-title">Inspiration Kit</span><span class="cue-track-artist">AndreySkarlat</span></span><span class="cue-track-length cue-track-cell">11:36</span></li>
-                                                <li class="cue-track is-playable"><span class="cue-track-details cue-track-cell"><span class="cue-track-title">Upbeat &amp; Inspiring</span><span class="cue-track-artist">AndreySkarlat</span></span><span class="cue-track-length cue-track-cell">5:55</span></li>
-                                            </ol>
-                                        </div>
-                                        <script type="application/json" class="cue-playlist-data">
-                                            {
-                                                "embed_link": "",
-                                                "permalink": "",
-                                                "skin": "",
-                                                "thumbnail": "./Singer_files/04.jpg",
-                                                "tracks": [{
-                                                    "artist": "AndreySkarlat",
-                                                    "artworkId": 0,
-                                                    "artworkUrl": "#0",
-                                                    "audioId": 1,
-                                                    "audioUrl": "https://s3.envato.com/files/229455919/preview.mp3",
-                                                    "format": "mp3",
-                                                    "length": "5:55",
-                                                    "title": "Upbeat & Inspiring",
-                                                    "order": 0,
-                                                    "mp3": "https://s3.envato.com/files/229455919/preview.mp3",
-                                                    "meta": {
-                                                        "artist": "AndreySkarlat",
-                                                        "length_formatted": "5:55"
-                                                    },
-                                                    "src": "https://s3.envato.com/files/229455919/preview.mp3",
-                                                    "thumb": {
-                                                        "src": "./Singer_files/04.jpg"
-                                                    }
-                                                }, {
-                                                    "artist": "AndreySkarlat",
-                                                    "artworkId": 0,
-                                                    "artworkUrl": "#0",
-                                                    "audioId": 2,
-                                                    "audioUrl": "https://0.s3.envato.com/files/216844247/preview.mp3",
-                                                    "format": "mp3",
-                                                    "length": "7:48",
-                                                    "title": "Inspiring Uplifting Corporate",
-                                                    "order": 0,
-                                                    "mp3": "https://0.s3.envato.com/files/216844247/preview.mp3",
-                                                    "meta": {
-                                                        "artist": "AndreySkarlat",
-                                                        "length_formatted": "7:48"
-                                                    },
-                                                    "src": "https://0.s3.envato.com/files/216844247/preview.mp3",
-                                                    "thumb": {
-                                                        "src": "./Singer_files/04.jpg"
-                                                    }
-                                                }, {
-                                                    "artist": "AndreySkarlat",
-                                                    "artworkId": 0,
-                                                    "artworkUrl": "#0",
-                                                    "audioId": 3,
-                                                    "audioUrl": "https://0.s3.envato.com/files/196824856/preview.mp3",
-                                                    "format": "mp3",
-                                                    "length": "11:36",
-                                                    "title": "Inspiration Kit",
-                                                    "order": 0,
-                                                    "mp3": "https://0.s3.envato.com/files/196824856/preview.mp3",
-                                                    "meta": {
-                                                        "artist": "AndreySkarlat",
-                                                        "length_formatted": "11:36"
-                                                    },
-                                                    "src": "https://0.s3.envato.com/files/196824856/preview.mp3",
-                                                    "thumb": {
-                                                        "src": "images/albums/03.jpg"
-                                                    }
-                                                }, {
-                                                    "artist": "AndreySkarlat",
-                                                    "artworkId": 0,
-                                                    "artworkUrl": "#0",
-                                                    "audioId": 4,
-                                                    "audioUrl": "https://0.s3.envato.com/files/179391137/preview.mp3",
-                                                    "format": "mp3",
-                                                    "length": "4:26",
-                                                    "title": "Happy Upbeat Ukulele",
-                                                    "order": 0,
-                                                    "mp3": "https://0.s3.envato.com/files/179391137/preview.mp3",
-                                                    "meta": {
-                                                        "artist": "AndreySkarlat",
-                                                        "length_formatted": "4:26"
-                                                    },
-                                                    "src": "https://0.s3.envato.com/files/179391137/preview.mp3",
-                                                    "thumb": {
-                                                        "src": "images/albums/04.jpg"
-                                                    }
-                                                }, {
-                                                    "artist": "AndreySkarlat",
-                                                    "artworkId": 0,
-                                                    "artworkUrl": "#0",
-                                                    "audioId": 5,
-                                                    "audioUrl": "https://0.s3.envato.com/files/175505487/preview.mp3",
-                                                    "format": "mp3",
-                                                    "length": "3:30",
-                                                    "title": "Motivational and Inspiring",
-                                                    "order": 0,
-                                                    "mp3": "https://0.s3.envato.com/files/175505487/preview.mp3",
-                                                    "meta": {
-                                                        "artist": "AndreySkarlat",
-                                                        "length_formatted": "3:30"
-                                                    },
-                                                    "src": "https://0.s3.envato.com/files/175505487/preview.mp3",
-                                                    "thumb": {
-                                                        "src": "images/albums/05.jpg"
-                                                    }
-                                                }, {
-                                                    "artist": "AndreySkarlat",
-                                                    "artworkId": 0,
-                                                    "artworkUrl": "#0",
-                                                    "audioId": 3,
-                                                    "audioUrl": "https://0.s3.envato.com/files/196824856/preview.mp3",
-                                                    "format": "mp3",
-                                                    "length": "11:36",
-                                                    "title": "Inspiration Kit",
-                                                    "order": 0,
-                                                    "mp3": "https://0.s3.envato.com/files/196824856/preview.mp3",
-                                                    "meta": {
-                                                        "artist": "AndreySkarlat",
-                                                        "length_formatted": "11:36"
-                                                    },
-                                                    "src": "https://0.s3.envato.com/files/196824856/preview.mp3",
-                                                    "thumb": {
-                                                        "src": "images/albums/03.jpg"
-                                                    }
-                                                }, {
-                                                    "artist": "AndreySkarlat",
-                                                    "artworkId": 0,
-                                                    "artworkUrl": "#0",
-                                                    "audioId": 1,
-                                                    "audioUrl": "https://s3.envato.com/files/229455919/preview.mp3",
-                                                    "format": "mp3",
-                                                    "length": "5:55",
-                                                    "title": "Upbeat & Inspiring",
-                                                    "order": 0,
-                                                    "mp3": "https://s3.envato.com/files/229455919/preview.mp3",
-                                                    "meta": {
-                                                        "artist": "AndreySkarlat",
-                                                        "length_formatted": "5:55"
-                                                    },
-                                                    "src": "https://s3.envato.com/files/229455919/preview.mp3",
-                                                    "thumb": {
-                                                        "src": "./Singer_files/04.jpg"
-                                                    }
-                                                }]
-                                            }
-                                        </script>
-                                    </div>
-                                </div>
+                            <article id="playsit-soundcloud" class="myscroolbar">
+                                
+                                <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/609234285&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+                                <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/594083769&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+                               <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/587425830&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+                                <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/563366598&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+                           
                             </article>
                         </div>
                     </div>
                 </div>
             </section>
-            <section id="contact" class="ds ms background_cover page_contact section_padding_top_150 section_padding_bottom_150">
+
+     
+            <footer id="contact" class="page_footer ds section_padding_top_100 section_padding_bottom_100 columns_padding_25">
                 <div class="container">
                     <div class="row">
-                        <div class="col-sm-6 col-sm-offset-6 text-center">
-                            <h2 class="section_header with_line">Contact for Booking</h2>
-                            <p> For booking and press inquiries please contact my manager by filling the form or calling the number: 1-888-652-2588 </p>
-                            <form class="contact-form columns_padding_10 topmargin_30" method="post" action="">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group margin_0"> <label for="name">Full Name <span class="required">*</span></label> <input type="text" aria-required="true" size="30" value="" name="name" id="name" class="form-control" placeholder="Full Name*"> </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group margin_0"> <label for="email">Email address<span class="required">*</span></label> <input type="email" aria-required="true" size="30" value="" name="email" id="email" class="form-control" placeholder="Your Email Address*">                                            </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="form-group margin_0"> <label for="message">Your question</label> <textarea aria-required="true" rows="5" cols="45" name="message" id="message" class="form-control" placeholder="Your Message*"></textarea> </div>
-                                    </div>
-                                </div>
-                                <div class="row topmargin_20">
-                                    <div class="col-sm-12">
-                                        <div class=" text-center">
-                                            <a class="submitNew" href="mailto:nullepart@mozilla.org?subject=Demande%20inscription%20newsletter&body=Inscrivez-moi%20%C3%A0%20votre%20newsletter%20%21%0D%0A%0D%0ANom%20complet%20%3A%0D%0A%0D%0AO%C3%B9%20avez-vous%20entendu%20parler%20de%20nous%20%3F">
-                                              submit now
-                                            </a>
-                                        </div>
-                                    </div>
-                            </form>
-                            </div>
-                        </div>
-                    </div>
-            </section>
-
-            <section id="gallery" class="ds ms">
-                <div class="owl-carousel gallery-carousel owl-loaded owl-drag owl-theme" data-responsive-xlg="8" data-responsive-lg="6" data-responsive-md="5" data-responsive-sm="4" data-responsive-xs="2" data-loop="true" data-margin="0" data-nav="true">
-
-
-
-
-
-                    <div> <img src="./Singer_files/Carrer/1.jpg" alt="">
-                        <div class="media-links">
-                            <a class="abs-link prettyPhoto" data-gal="prettyPhoto[gal]" title="" href="./Singer_files/Carrer/1.jpg"></a>
-                        </div>
-                    </div>
-                    <div> <img src="./Singer_files/Carrer/2.jpg" alt="">
-                        <div class="media-links">
-                            <a class="abs-link prettyPhoto" data-gal="prettyPhoto[gal]" title="" href="./Singer_files/Carrer/1.jpg"></a>
-                        </div>
-                    </div>
-                    <div> <img src="./Singer_files/Carrer/3.jpg" alt="">
-                        <div class="media-links">
-                            <a class="abs-link prettyPhoto" data-gal="prettyPhoto[gal]" title="" href="./Singer_files/Carrer/1.jpg"></a>
-                        </div>
-                    </div>
-                    <div> <img src="./Singer_files/Carrer/4.jpg" alt="">
-                        <div class="media-links">
-                            <a class="abs-link prettyPhoto" data-gal="prettyPhoto[gal]" title="" href="./Singer_files/Carrer/1.jpg"></a>
-                        </div>
-                    </div>
-                    <div> <img src="./Singer_files/Carrer/5.jpg" alt="">
-                        <div class="media-links">
-                            <a class="abs-link prettyPhoto" data-gal="prettyPhoto[gal]" title="" href="./Singer_files/Carrer/1.jpg"></a>
-                        </div>
-                    </div>
-                    <div> <img src="./Singer_files/Carrer/6.jpg" alt="">
-                        <div class="media-links">
-                            <a class="abs-link prettyPhoto" data-gal="prettyPhoto[gal]" title="" href="./Singer_files/Carrer/1.jpg"></a>
-                        </div>
-                    </div>
-                    <div> <img src="./Singer_files/Carrer/7.jpg" alt="">
-                        <div class="media-links">
-                            <a class="abs-link prettyPhoto" data-gal="prettyPhoto[gal]" title="" href="./Singer_files/Carrer/1.jpg"></a>
-                        </div>
-                    </div>
-                    <div> <img src="./Singer_files/Carrer/8.jpg" alt="">
-                        <div class="media-links">
-                            <a class="abs-link prettyPhoto" data-gal="prettyPhoto[gal]" title="" href="./Singer_files/Carrer/1.jpg"></a>
-                        </div>
-                    </div>
-                    <div> <img src="./Singer_files/Carrer/9.jpg" alt="">
-                        <div class="media-links">
-                            <a class="abs-link prettyPhoto" data-gal="prettyPhoto[gal]" title="" href="./Singer_files/Carrer/1.jpg"></a>
-                        </div>
-                    </div>
-                    <div> <img src="./Singer_files/Carrer/10.jpg" alt="">
-                        <div class="media-links">
-                            <a class="abs-link prettyPhoto" data-gal="prettyPhoto[gal]" title="" href="./Singer_files/Carrer/1.jpg"></a>
-                        </div>
-                    </div>
-                    <div> <img src="./Singer_files/Carrer/11.jpg" alt="">
-                        <div class="media-links">
-                            <a class="abs-link prettyPhoto" data-gal="prettyPhoto[gal]" title="" href="./Singer_files/Carrer/1.jpg"></a>
-                        </div>
-                    </div>
-                    <div> <img src="./Singer_files/Carrer/12.jpg" alt="">
-                        <div class="media-links">
-                            <a class="abs-link prettyPhoto" data-gal="prettyPhoto[gal]" title="" href="./Singer_files/Carrer/1.jpg"></a>
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-
-
-                </div>
-
-
-                </div>
-            </section>
-            <footer class="page_footer ds section_padding_top_100 section_padding_bottom_100 columns_padding_25">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6 text-center">
+                        <div class="col-md-4 text-center">
                             <div class="widget widget_text">
-                                <h4 class="widget-title with_line"> My Contacts </h4>
+                                <h4 class="widget-title with_line"> Contact </h4>
                                 <div>
                                     <div class="media small-media inline-block">
                                         <div class="media-left"> <i class="fa fa-map-marker highlight" aria-hidden="true"></i> </div>
-                                        <div class="media-body"> 140 Horizon Circle, New York, California </div>
+                                        <div class="media-body">  Hauts-De-France</div>
                                     </div><br>
+                                   
                                     <div class="media small-media inline-block">
-                                        <div class="media-left"> <i class="fa fa-phone highlight" aria-hidden="true"></i> </div>
-                                        <div class="media-body"> 1-888-652-2588 </div>
-                                    </div><br>
-                                    <div class="media small-media inline-block">
-
-                                        <div class="media-left"> <i class="fas fa-envelope-open highlight"></i> </div>
-                                        <div class="media-body"> shannon@example.com </div>
+                                        <div class="media-left"> <i class="fa fa-pencil highlight" aria-hidden="true"></i> </div>
+                                        <div class="media-body"> shannon.areias@hotmail.com </div>
                                     </div><br>
                                     <div class="media small-media greylinks inline-block">
-                                        <div class="media-left"> <i class="fab fa-internet-explorer highlight"></i></i>
-                                        </div>
-                                        <div class="media-body"> <a href="#">https://www.shannon.com</a> </div>
+                                        <div class="media-left"> <i class="fa fa-internet-explorer highlight" aria-hidden="true"></i> </div>
+                                        <div class="media-body"> <a href="#">https://www.shannonareias.website</a> </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <div class="col-md-4 col-sm-6 text-center">
+                            <div class="widget widget_mailchimp">
+                                <h4 class="widget-title with_line">Mes partenaires</h4>
+                                <form class="signup" action="./" method="get">
+                                    <a href="https://www.facebook.com/STANISIGHT/"><p class="bottommargin_20">Stanisight</p></a>
+                                    <a href="https://www.facebook.com/STANISIGHT/"><p class="bottommargin_20">Naon's</p></a>
+                                    <a href="https://www.facebook.com/BoomerangFrethun/"><p class="bottommargin_20">Boomerang Événementiel</p></a>
+                                    <a href="https://www.facebook.com/mcollinsphotography/"><p class="bottommargin_20">MCollins. Photography</p></a>
+                                   
+                                  
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 to_animate">
+                            <div class="widget widget_text">
+                                <h3 class="widget-title with_line">Me Suivre</h3>
+                                <div class="media small-media">
+                                    <div class="media-left media-middle">
+                                        <a href="https://www.facebook.com/Cecilia-Lorenz-104260894447866/" class="social-icon color-icon border-icon -icon socicon-facebook"></a>
+                                    </div>
+                                    <div class="media-body media-middle"> Facebook </div>
+                                </div>
+                                <div class="media small-media">
+                                    <div class="media-left media-middle">
+                                        <a href="https://www.instagram.com/cecilialorenz_artist/?hl=fr" class="social-icon color-icon border-icon -icon socicon-instagram"></a>
+                                    </div>
+                                    <div class="media-body media-middle"> Instagram </div>
+                                </div>     
+                                <div class="media small-media">
+                                    <div class="media-left media-middle">
+                                        <a href="https://www.youtube.com/channel/UC4CkXt5PqQBjJQBkOZFwfEQ" class="social-icon color-icon border-icon -icon socicon-youtube"></a>
+                                    </div>
+                                    <div class="media-body media-middle"> Youtube </div>
+                                </div>
 
-                        <div class="col-md-6 text-center">
-                            <div class="widget widget_recent_entries">
-                                <h4 class="widget-title with_line">Autre Groupe</h4>
-                                <ul class="greylinks">
-                                    <li>
-                                        <p class="bottommargin_0"> <a href="blog-single-left.html">NOAN's</a> </p> <span class="entry-date small-text highlight">
-								<time class="entry-date" datetime="2017-03-13T08:50:40+00:00">
-									Chanteuse
-								</time>
-							</span> </li>
-                                    <li>
-                                        <p class="bottommargin_0"> <a href="blog-single-left.html">Peter Pan</a> </p> <span class="entry-date small-text highlight">
-								<time class="entry-date" datetime="2017-03-13T08:50:40+00:00">
-									Chanteuse et danseuse
-								</time>
-							</span> </li>
-                                </ul>
                             </div>
                         </div>
                     </div>
@@ -653,8 +801,12 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-12 text-center">
-                            <p>© Copyright 2020. All Rights Reserved.</p>
-
+                            <p>&copy; Copyright 2017. All Rights Reserved.</p>
+                            <div>
+                                <a class="social-icon color-bg-icon round-icon socicon-facebook" href="#" title="Facebook"></a>
+                                <a class="social-icon color-bg-icon round-icon socicon-twitter" href="#" title="Twitter"></a>
+                                <a class="social-icon color-bg-icon round-icon socicon-google" href="#" title="Google"></a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -663,10 +815,10 @@
         <!-- eof #box_wrapper -->
     </div>
     <!-- eof #canvas -->
-    <script src="./Singer_files/compressed.js.téléchargement"></script>
-    <script src="./Singer_files/main.js.téléchargement"></script>
-    <script src="./Singer_files/mediaelement-and-player.min.js.téléchargement"></script>
-    <script src="./Singer_files/mediaelement-migrate.min.js.téléchargement"></script>
+    <script src="js/compressed.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/mediaelement-and-player.min.js"></script>
+    <script src="js/mediaelement-migrate.min.js"></script>
     <script>
         /* <![CDATA[ */
         var _cueSettings = {
@@ -679,9 +831,7 @@
         };
         /* ]]> */
     </script>
-    <script src="./Singer_files/cue.min.js.téléchargement"></script>
-
-
-    </div><a href="#" id="toTop" style="display: none;"><span id="toTopHover"></span>To Top</a></body>
+    <script src="js/cue.min.js"></script>
+</body>
 
 </html>

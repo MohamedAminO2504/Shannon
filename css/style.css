@@ -1,0 +1,101 @@
+#events.parallax {
+    background-image: url(../images/slide02.jpg);
+}
+
+#about.parallax {
+    background-image: url(../images/about.jpg);
+}
+
+#events a[class*='socicon-']:before {
+    font-family: 'socicon';
+    font-size: 35px;
+    line-height: 1;
+}
+
+#events a.color-icon.socicon-facebook {
+    color: white;
+}
+
+#events .vertical-item:hover .socicon-facebook.color-icon.border-icon {
+    background-color: #507cbe;
+}
+
+.ds a.border-icon {
+    border-color: #ff000000;
+}
+
+.entry-meta-corner {
+    top: 5px;
+    right: 15px;
+}
+
+#latest-album.page_latest_album.parallax {
+    background-image: url(../images/new/2guitar.jpg);
+}
+
+.ds .cue-playlist-container .cue-playlist .cue-tracks {
+    background-color: #31b3b366;
+    border-color: rgba(152, 152, 152, 0.2);
+}
+
+.ds .cue-playlist-container .cue-playlist .cue-track.is-current, .ds .cue-playlist-container .cue-playlist .cue-track:hover {
+    background-color: #01232b;
+}
+
+#galerie{
+    background-image: url("../images/events.jpg");
+
+}
+
+.g-background-default{
+    background-color:#31b3b366 ;
+}
+
+#playsit-soundcloud{
+    max-height: 500px;
+    overflow: auto;
+}
+
+
+#playsit-soundcloud::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+#playsit-soundcloud::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+#playsit-soundcloud::-webkit-scrollbar-thumb {
+  background: #e1e1e1;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+#playsit-soundcloud::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+#playsit-soundcloud::-webkit-scrollbar-thumb:active {
+  background: #000000;
+}
+#playsit-soundcloud::-webkit-scrollbar-track {
+  background: #666666;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+#playsit-soundcloud::-webkit-scrollbar-track:hover {
+  background: #666666;
+}
+#playsit-soundcloud::-webkit-scrollbar-track:active {
+  background: #333333;
+}
+#playsit-soundcloud::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+
+.g-background-default{
+  background-color: red;
+}
+
+.ds h2.corail{
+  color: #FF7F50;
+}
