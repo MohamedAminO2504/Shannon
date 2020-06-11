@@ -4906,6 +4906,12 @@ h2.section_header + .fontsize_20 {
 	display: none;
 }
 
+@media (max-width: 991px){
+.intro_section .nav-container {
+    padding: 0;
+    position: absolute;
+}
+}
 .preloader_image {
 	width: 100px;
 	height: 100px;
