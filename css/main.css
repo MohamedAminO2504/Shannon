@@ -295,6 +295,10 @@ Border colors for elements in color section: rgba(255, 255, 255, 0.2)
 	border-radius: 0;
 }
 
+.ds a.partenaire{
+	color:#b2b2b2;
+}
+
 .pagination > li:first-child > a,
 .pagination > li:first-child > span,
 .pagination > li:last-child > a,
@@ -4908,14 +4912,14 @@ h2.section_header + .fontsize_20 {
 	position: absolute;
 	left: 50%;
 	top: 50%;
-	background: url(../img/preloader.png) no-repeat 50% 50% transparent;
+	background: url("../img/preloader\ \(2\).gif") no-repeat 50% 50% transparent;
 	margin: -50px 0 0 -50px;
 	background-size: contain;
 }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
 	.preloader_image {
-		background: url(../img/preloader.png) no-repeat 50% 50% transparent;
+		background: url("../img/preloader\ \(2\).gif") no-repeat 50% 50% transparent;
 	}
 }
 
